@@ -1,6 +1,8 @@
+# #TG-RECAP (https://mrkrk.me/projects/tg-recap)
+# Copyright (C) 2025 Viktor K.
+
 import flet as ft
 import json
-import os
 import shutil
 
 from parser import *
@@ -83,7 +85,7 @@ def main(page: ft.Page):
         if images[index].endswith("bad.png"):
             top = stats_cache.get("top_bad_words", [])
             if not top:
-                text = "😎 Вы очень крутой"
+                text = "😎 Ты очень крутой"
             else:
                 text = "\n".join(f"{w} — {c}" for w, c in top)
             page.dialog = ft.AlertDialog(

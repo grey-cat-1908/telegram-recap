@@ -1,3 +1,6 @@
+# #TG-RECAP (https://mrkrk.me/projects/tg-recap)
+# Copyright (C) 2025 Viktor K.
+
 from dataclasses import dataclass
 import tempfile
 import os
@@ -320,7 +323,7 @@ def card_bad(s):
             font=ImageFont.truetype(FONT_BOLD, 80),
             position=980,
             fill=(224, 224, 224),
-            value=f"{inflect_with_num(s['bad_words'], ['нецензурное', 'нецензурных', 'нецензурных'])} {inflect_with_num(s['bad_words'], ['слово', 'слова', 'слов'])}",
+            value=f"{inflect_with_num(s['bad_words'], ['нецензурное', 'нецензурных', 'нецензурных'])} {inflect_with_num(s['bad_words'], ['слово', 'слов', 'слова'])}",
         ),
     )
     draw(

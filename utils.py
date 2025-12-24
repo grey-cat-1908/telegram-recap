@@ -1,3 +1,6 @@
+# #TG-RECAP (https://mrkrk.me/projects/tg-recap)
+# Copyright (C) 2025 Viktor K.
+
 import os
 import sys
 
