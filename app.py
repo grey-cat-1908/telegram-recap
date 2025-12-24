@@ -14,6 +14,7 @@ def main(page: ft.Page):
     page.window_height = 768
     page.window_resizable = False
     page.window_maximizable = False
+    page.window_icon = resource_path("assets/icon.png")
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.theme_mode = ft.ThemeMode.LIGHT
