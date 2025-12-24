@@ -1,0 +1,33 @@
+# IDE Configuration files
+.idea
+.vscode
+.vs
+
+# Python Environment
+*.py[dcw]
+__pycache__
+venv
+virtualenv
+pyvenv
+Pipfile.lock
+
+# Docs
+docs/_build
+
+# Dev Tools
+tools/*
+
+# Dev testing
+dev
+.pytest_cache
+_testing.py
+
+# Packaging
+*.egg-info
+bin
+docs/build
+dist
+MANIFEST
+
+# IDE Ext's
+.history/

@@ -18,8 +18,6 @@ def main(page: ft.Page):
     page.padding = 0
     page.spacing = 0
 
-    os.makedirs("output", exist_ok=True)
-
     images = []
     index = 0
     drag_dx = 0

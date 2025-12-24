@@ -1,3 +1,6 @@
+import os
+import sys
+
 MONTHS_RU = [
     "января",
     "февраля",
@@ -29,3 +32,11 @@ def inflect_with_num(number, forms):
     else:
         needed_form = 0
     return forms[needed_form]
+
+
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except AttributeError:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)

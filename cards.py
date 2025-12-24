@@ -1,13 +1,19 @@
 from dataclasses import dataclass
-from typing import Tuple
+import tempfile
+import os
 
+from typing import Tuple
 from PIL import Image, ImageDraw, ImageFont
 
-from utils import inflect_with_num
+from utils import inflect_with_num, resource_path
 
 WIDTH, HEIGHT = 1080, 1920
-FONT_BOLD = "assets/Inter-Bold.ttf"
-FONT_REG = "assets/Inter-Regular.ttf"
+FONT_BOLD = resource_path("assets/Inter-Bold.ttf")
+FONT_REG = resource_path("assets/Inter-Regular.ttf")
+
+temp_dir = tempfile.gettempdir()
+my_temp_dir = os.path.join(temp_dir, "tg_recap")
+os.makedirs(my_temp_dir, exist_ok=True)
 
 
 @dataclass
@@ -34,13 +40,13 @@ def draw(d, text):
 
 
 def save(img, name):
-    path = f"output/{name}.png"
+    path = os.path.join(my_temp_dir, f"{name}.png")
     img.save(path)
     return path
 
 
 def card_active_day(s):
-    img, d = base_card("assets/bg_day.png")
+    img, d = base_card(resource_path("assets/bg_day.png"))
 
     day, count = s["active_day"]
 
@@ -76,7 +82,7 @@ def card_active_day(s):
 
 
 def card_bad_day(s):
-    img, d = base_card("assets/bg_bad_day.png")
+    img, d = base_card(resource_path("assets/bg_bad_day.png"))
 
     day, count = s["bad_day"]
 
@@ -112,7 +118,7 @@ def card_bad_day(s):
 
 
 def card_messages(s):
-    img, d = base_card("assets/bg_messages.png")
+    img, d = base_card(resource_path("assets/bg_messages.png"))
     draw(
         d,
         Text(
@@ -146,7 +152,7 @@ def card_messages(s):
 
 
 def card_photos(s):
-    img, d = base_card("assets/bg_photos.png")
+    img, d = base_card(resource_path("assets/bg_photos.png"))
     draw(
         d,
         Text(
@@ -180,7 +186,7 @@ def card_photos(s):
 
 
 def card_videos(s):
-    img, d = base_card("assets/bg_videos.png")
+    img, d = base_card(resource_path("assets/bg_videos.png"))
     draw(
         d,
         Text(
@@ -214,7 +220,7 @@ def card_videos(s):
 
 
 def card_stickers(s):
-    img, d = base_card("assets/bg_stickers.png")
+    img, d = base_card(resource_path("assets/bg_stickers.png"))
     draw(
         d,
         Text(
@@ -246,7 +252,7 @@ def card_stickers(s):
 
 
 def card_audio(s):
-    img, d = base_card("assets/bg_audio.png")
+    img, d = base_card(resource_path("assets/bg_audio.png"))
     draw(
         d,
         Text(
@@ -280,7 +286,7 @@ def card_audio(s):
 
 
 def card_users(s):
-    img, d = base_card("assets/bg_top_users.png")
+    img, d = base_card(resource_path("assets/bg_top_users.png"))
     y = 930 - 60 * (len(s["top_users"]) - 1)
     for _, (u, c) in enumerate(s["top_users"], 1):
         display_name = (u[: 2 - 3] + "…") if len(u) > 22 else u
@@ -298,7 +304,7 @@ def card_users(s):
 
 
 def card_bad(s):
-    img, d = base_card("assets/bg_bad_words.png")
+    img, d = base_card(resource_path("assets/bg_bad_words.png"))
     draw(
         d,
         Text(
