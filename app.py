@@ -124,7 +124,7 @@ def main(page: ft.Page):
         if stats_cache["audio"] > 0:
             images.append(card_audio(stats_cache))
 
-        images += [card_active_day(stats_cache), card_bad(stats_cache)]
+        images += [card_bad(stats_cache), card_active_day(stats_cache)]
 
         if stats_cache.get("bad_day"):
             images.append(card_bad_day(stats_cache))
