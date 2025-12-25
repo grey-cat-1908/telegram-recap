@@ -16,7 +16,7 @@
 | ----------------------------------------------------------------------------------------- | ----- |
 | [Скачать](https://github.com/grey-cat-1908/tg-recap/releases/download/1.0.0/tg_recap.exe) | [Скачать](https://github.com/grey-cat-1908/tg-recap/releases/download/1.0.0/tg_recap_macos.zip) |
 
-**Запуск на Mac OS:**
+**Запуск на macOS:**
 При открытии файла компьютер может выдать ошибку из-за того, что приложение не проверено Apple.
 
 <img width="291" height="265" alt="first" src="https://github.com/user-attachments/assets/43d60080-43d5-4dc2-a2ce-12b222ebda34" />
@@ -66,6 +66,7 @@
 ## Лицензия
 
 Распространяется в соответствии с условиями лицензии GNU AGPLv3.
+
 
 
 
