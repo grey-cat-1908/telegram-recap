@@ -14,7 +14,7 @@
 
 |                                          Windows                                          | macOS |
 | ----------------------------------------------------------------------------------------- | ----- |
-| [Скачать](https://github.com/grey-cat-1908/tg-recap/releases/download/1.0.0/tg_recap.exe) | Скоро |
+| [Скачать](https://github.com/grey-cat-1908/tg-recap/releases/download/1.0.0/tg_recap.exe) | [Скачать](https://github.com/grey-cat-1908/tg-recap/releases/download/1.0.0/tg_recap_macos.zip) |
 
 #### 2) Самостоятельный запуск с помощью Python
 
@@ -53,3 +53,4 @@
 ## Лицензия
 
 Распространяется в соответствии с условиями лицензии GNU AGPLv3.
+
